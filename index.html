@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Pokedex!</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Enter Pokemon name or index">
+            <button id="searchButton" onclick="searchPokemon()">Search</button>
+        </div>
+        <div id="pokemonInfo" class="pokemon-display"></div>
+        <div id="pokemonStats" class="pokemon-stats"></div>
+        <div id="pokemonId" style="display: none;"></div>
+        <div id="evolutionChainId" style="display: none;"></div>
+        <!-- Add divs for arrows with initial display set to none -->
+        <div id="evolutionArrows" class="evolution-arrows" style="display: none;">
+            <span id="prevArrow" class="arrow" onclick="navigateEvolution(-1,pokemonInfo)">&#8592;</span>
+            <span id="nextArrow" class="arrow" onclick="navigateEvolution(1, pokemonInfo)">&#8594;</span>
+        </div>
+
+    </div>
+    <!-- Link to the external JavaScript file -->
+    <script src="static/script.js"></script>
+</body>
+</html>
